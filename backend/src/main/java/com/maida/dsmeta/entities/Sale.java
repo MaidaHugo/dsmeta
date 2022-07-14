@@ -2,6 +2,7 @@ package com.maida.dsmeta.entities;
 
 import java.time.LocalDate;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,15 +16,21 @@ public class Sale {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "seller_name")
     private String sellerName;
+
+    @Column(name = "visited")
     private Integer visited;
+
+    @Column(name = "deals")
     private Integer deals;
+
+    @Column(name = "amount")
     private Double amount;
+
+    @Column(name = "date")
     private LocalDate date;
-
-    public Sale() {
-
-    }
 
     public Long getId() {
         return id;
