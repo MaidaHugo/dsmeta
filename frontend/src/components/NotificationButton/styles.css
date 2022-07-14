@@ -8,6 +8,23 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: 0.2 ease-in;
+  z-index: 1;
+  color: unset;
+}
+
+.dsmeta-red-btn::before,
+.dsmeta-red-btn::after {
+  position: absolute;
+  content: "";
+  z-index: -1;
+}
+
+.dsmeta-red-btn:hover {
+  color: #ff6b72;
+  cursor: pointer;
+  box-shadow: 0 0 5px #ff6b72, 0 0 25px #ff6b72, 0 0 50px #ff6b72,
+    0 0 200px #ff6b72;
 }
 
 .dsmeta-red-btn img {
