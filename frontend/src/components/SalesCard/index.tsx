@@ -26,7 +26,7 @@ function SalesCard() {
       .then((response) => {
         setSales(response.data.content);
       });
-  }, [minDate, maxDate]);
+  }, [minDate, maxDate]); // Faz com que toda fez que a data for alterada, recarregue a página
 
   return (
     <div className="dsmeta-card">
@@ -77,7 +77,7 @@ function SalesCard() {
                   <td>R$ {sale.amount.toFixed(2)}</td>
                   <td>
                     <div className="dsmeta-red-btn-container">
-                      <NotificationButton />
+                      <NotificationButton saleId={sale.id} />
                     </div>
                   </td>
                 </tr>
